@@ -1,1 +1,0 @@
-set(AM_OLD_COMPILE_SETTINGS "QT_CORE_LIB;QT_DBUS_LIB;QT_NO_DEBUG ~~~ /home/nick/Projects/DBus/daemon;/home/nick/Projects/DBus;/usr/include/qt5;/usr/include/qt5/QtCore;/usr/lib64/qt5/./mkspecs/linux-g++;/usr/include/qt5/QtDBus ~~~  ~~~ FALSE ~~~ ")

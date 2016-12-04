@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/Client.dir/main.cpp.o CMakeFiles/Client.dir/Client_automoc.cpp.o  -o ../bin/Client -rdynamic /usr/lib64/libQt5DBus.so.5.6.1 /usr/lib64/libQt5Core.so.5.6.1 

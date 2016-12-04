@@ -1,1 +1,0 @@
-/usr/bin/cc     CMakeFiles/gClient.dir/main.c.o  -o ../bin/gClient -rdynamic -lgio-2.0 -lgobject-2.0 -lglib-2.0 
