@@ -1,0 +1,9 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8.11)
+
+PROJECT(gClient)
+
+INCLUDE_DIRECTORIES(/usr/include/glib-2.0 /usr/lib64/glib-2.0/include)
+
+ADD_EXECUTABLE(${PROJECT_NAME} main.c)
+
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} gio-2.0 gobject-2.0 glib-2.0)
