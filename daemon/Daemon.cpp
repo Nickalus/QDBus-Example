@@ -37,3 +37,10 @@ QString Daemon::Quit()
   char * quit = "Quit\n";
   return quit;
 }
+
+QDBusVariant Daemon::VariantTest()
+{
+  QVariant v = 40;
+  //Convert the QVariant to a QDBusVariant
+  return QDBusVariant(v);
+}

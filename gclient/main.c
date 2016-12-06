@@ -19,9 +19,9 @@ int main()
                                                  SERVICE_NAME,
                                                  OBJECT_PATH,
                                                  INTERFACE,
-                                                 "Run",
+                                                 "VariantTest",
                                                  NULL,
-                                                 G_VARIANT_TYPE("(i)"),
+                                                 G_VARIANT_TYPE("(v)"),
                                                  G_DBUS_CALL_FLAGS_NONE,
                                                  G_MAXINT,
                                                  NULL,
@@ -34,6 +34,13 @@ int main()
     g_error_free(err);
   }
 
-  //Convert the varient into a 32bit integer
-  g_print("%d", g_variant_get_int32(g_variant_get_child_value(reply, 0)));
+  //Get the variant from the tuple
+  GVariant * myVariant = g_variant_get_variant(g_variant_get_child_value(reply, 0));
+  
+  //convert the variant to an int
+  int myInt = 0;
+  g_variant_get(myVariant, "i", &myInt);
+
+  //Display the int 
+  g_print("%i", myInt);
 }

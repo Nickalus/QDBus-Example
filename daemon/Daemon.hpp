@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
+#include <QDBusVariant> 
 
 class Daemon : public QObject
 {
@@ -18,6 +19,8 @@ class Daemon : public QObject
     QString DataTransmit(const QString &);
 
     QString Quit();
+
+    QDBusVariant VariantTest();
 
   private:
     enum State
