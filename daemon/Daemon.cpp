@@ -41,6 +41,8 @@ QString Daemon::Quit()
 QDBusVariant Daemon::VariantTest()
 {
   QVariant v = 40;
+  QList<QVariant> arguments;
+  arguments << QVariant(42) << QVariant("hello");
   //Convert the QVariant to a QDBusVariant
-  return QDBusVariant(v);
+  return QDBusVariant(arguments);
 }

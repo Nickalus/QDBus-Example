@@ -37,10 +37,17 @@ int main()
   //Get the variant from the tuple
   GVariant * myVariant = g_variant_get_variant(g_variant_get_child_value(reply, 0));
   
+  GVariant * myVariant1 = g_variant_get_variant(g_variant_get_child_value(myVariant, 0));
+  GVariant * myVariant2 = g_variant_get_variant(g_variant_get_child_value(myVariant, 1));
+  
   //convert the variant to an int
   int myInt = 0;
-  g_variant_get(myVariant, "i", &myInt);
-
+  g_variant_get(myVariant1, "i", &myInt);
+  
+  gchar * result;
+  g_variant_get(myVariant2, "s", &result);
+  
+  
   //Display the int 
-  g_print("%i", myInt);
+  g_print("%i, %s", myInt, result);
 }
